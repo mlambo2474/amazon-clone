@@ -4,6 +4,7 @@ import { loadStripe} from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js"
 import Header from "./components/layout/Header";
 import Home from "./components/Home/Home";
+import Footer from "./components/footer/Footer";
 import Login from "./components/Login/Login";
 import ProductDetails from "./components/products/ProductDetails";
 import Products from "./components/products/Products";
@@ -14,6 +15,7 @@ import { auth } from "./firebase";
 import Checkout from "./components/checkout/Checkout";
 import Payment from "./components/payment/Payment";
 import Orders from "./components/orders/Orders";
+import Navigation from "./components/layout/Navigation";
 
 const promise = loadStripe(
   'pk_test_51R3BOvLmYwos7MVP66FcxymPbx9VY6L3hS4B5mBCu0FGfJ3KOQsGoWnnkZjHNt77Gj23kRFaW5c3fAowhQJV1WtJ00oweYw3sS'
@@ -36,8 +38,9 @@ function App() {
   },[])
 
   return (
-    <>
+    <div>
       <Header />
+       <Navigation />
       <main>
         <Switch>
           <Route path="/" exact>
@@ -78,7 +81,8 @@ function App() {
           </Route>
         </Switch>
       </main>
-    </>
+      <Footer />
+    </div>
   );
 }
 

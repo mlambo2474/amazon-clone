@@ -1,9 +1,12 @@
 .header {
-  background: #223040;
+  background: #131921;
   height: 70px;
   display: flex;
   font-size: "roboto", sans-serif;
   position: sticky;
+  top:0;
+  z-index: 100;
+ 
 }
 a {
   text-decoration: none;
@@ -15,11 +18,13 @@ a {
   align-items: center;
   color: white;
   font-size: 1.3em;
+ 
 }
 .logo img {
-  width: 150px;
+  width: 140px;
+  height:63px ;
   margin-left: 3px;
-  padding-top: 5px;
+  padding-top: 11px;
 }
 
 .location {
@@ -74,8 +79,8 @@ a {
   padding: 0 40px;
 }
 .search-bar input {
-  height: 39px;
-  width: 330px;
+  height: 40px;
+  width: 430px;
   font-size: 15px;
   padding: 5px;
   outline: none;

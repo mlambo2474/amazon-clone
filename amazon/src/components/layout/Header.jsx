@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logo2 from "./logo2.png";
+import colorlogo from "./colorlogo.png"
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -13,12 +14,16 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 // import AuthContext from "../../context/authContext";
 import ShoppingContext from "../../context/shopping/shoppingContext";
+import { useSearch } from "../../context/SearchContext";
+
 import { auth } from "../../firebase";
 
 const Header = () => {
   const shoppingContext = useContext(ShoppingContext);
   const { basket, user, emptyBasket } = shoppingContext;
   // const ctx = useContext(AuthContext);
+  const { setSearchTerm } = useSearch();
+  
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
@@ -34,7 +39,7 @@ const Header = () => {
       >
         <div className="logo hover">
           <Link to="/home">
-            <img src={logo2} alt="amazon logo" />
+            <img src={colorlogo} alt="amazon logo" />
           </Link>
           <span>.co.za</span>
         </div>
@@ -52,7 +57,7 @@ const Header = () => {
             <span>All </span>
             <ArrowDropDownIcon />
           </div>
-          <input type="search" placeholder="Search Amazon.co.za" />
+          <input type="search" placeholder="Search Amazon.co.za" onChange={(e) =>setSearchTerm(e.target.value)}/>
           <div className="search-icon">
             <SearchIcon />
           </div>
