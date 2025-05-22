@@ -1,8 +1,7 @@
 .footer{
     display: flex;
   background-color:#232F3E ;
-    width:100%;
-    padding : 20px 120px;
+ justify-content: center;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       border-bottom: 1px solid lightgray;
@@ -11,9 +10,8 @@
 .section{
     display: flex;
     flex-direction:column;
- 
     align-items: start;
-   padding: 30px 70px;
+   padding: 70px 70px;
 }
 .section p{
     font-size: 14px;
@@ -33,7 +31,7 @@
   color: white;
   font-size: 1.3em;
   background-color: #232F3E;
-  padding: 30px 0 ;
+  padding: 50px 0 ;
 }
 .logos .amazon-logo {
   width: 140px;
