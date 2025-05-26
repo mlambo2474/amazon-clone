@@ -22,6 +22,7 @@
     font-size: 13px;
     padding: 2px 0;
     width: 150px;
+    max-width:100px
 }
 
 .logos {
@@ -35,6 +36,7 @@
 }
 .logos .amazon-logo {
   width: 140px;
+
   height:65px ;
    padding-right: 20px;
   padding-top: 11px;
@@ -65,6 +67,12 @@
    color: whitesmoke;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-@media (max-width) {
+
+
+@media (max-width: 768px) {
+  .section{
+    padding: 70px 10px;
+  }
+
 
 }

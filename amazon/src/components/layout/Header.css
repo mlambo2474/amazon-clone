@@ -1,13 +1,20 @@
 .header {
   background: #131921;
-  height: 70px;
-  display: flex;
   font-size: "roboto", sans-serif;
   position: sticky;
   top:0;
   z-index: 100;
  
 }
+.header-container {
+  max-width: 1400px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -57,6 +64,10 @@ a {
 .search-bar {
   display: flex;
   align-items: center;
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 10px;
+  min-width: 200px;
 }
 .drop {
   display: flex;
@@ -80,11 +91,13 @@ a {
 }
 .search-bar input {
   height: 40px;
+   flex-grow: 1;
   width: 430px;
   font-size: 15px;
   padding: 5px;
   outline: none;
   border: none;
+  min-width: 0; 
 }
 .search-icon {
   background-color: #febd69;
@@ -122,4 +135,37 @@ a {
 .cart span {
   font-size: 1.2em;
   color: #febd69;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    /* flex-direction: column; */
+    width: 100%;
+    padding: 10px 0;
+  }
+.location h4{
+  display: none;
+}
+
+
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+  .logo span{
+    display: none;
+  }
+
+  .cart{
+    margin-top: 22px;
+    margin-right:10px;
+    padding: 10px 0;
+  }
+.return{
+  display:none ;
+}
+  .header-container {
+    /* flex-direction: column; */
+    align-items: center;
+  }
 }

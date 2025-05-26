@@ -37,6 +37,7 @@ const Header = () => {
         className="header"
         style={{ fontFamily: "Roboto, sans-serif", fontWeight: "400 " }}
       >
+          <div className="header-container">
         <div className="logo hover">
           <Link to="/home">
             <img src={colorlogo} alt="amazon logo" />
@@ -75,7 +76,7 @@ const Header = () => {
           </Link>
 
          <Link to="/orders">
-         <div className="menu  hover user-email ">
+         <div className="menu return hover user-email ">
               <p className="returns">Returns</p>
               <h4 >& Orders</h4>
             </div>
@@ -90,6 +91,7 @@ const Header = () => {
           </div>
           </Link>
         </div>
+      </div>
       </div>
     </>
   );

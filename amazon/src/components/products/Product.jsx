@@ -24,14 +24,20 @@ const Product = ({  id, image, description, price, rating }) => {
               <p key={i}>⭐</p>
             ))}
         </div>
-        <p className="price">
+        <div className="pricing"> 
+        <div className="price">
           <small>$</small>
           <strong>{price}</strong>
-        </p>
-      </div>
-      <button className="product-button" onClick={addToBasketHandler}>
+        </div>
+
+  <button className="product-button" onClick={addToBasketHandler}>
         Add to Basket
       </button>
+</div>
+
+      </div>
+      
+    
     </div>
   );
 };

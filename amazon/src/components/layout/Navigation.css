@@ -39,3 +39,17 @@
     color: white;
     letter-spacing: 1px;
 }
+
+
+@media (max-width: 768px) {
+  .navigation {
+    font-size: 10px;
+  }
+
+.nav-spans span{
+ padding: 0 8px;
+}
+  .essentials {
+  font-size: small;
+  }
+}

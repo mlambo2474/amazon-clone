@@ -14,13 +14,9 @@ const Home = () => {
           muted
           playsInline
         ></video>
-        {/* <img
-          className="home-image"
-          src="https://m.media-amazon.com/images/I/71ZHRT+CrPL._SX3000_.jpg"
-          // src="https://m.media-amazon.com/images/I/61wV73vy6ZL._SX3000_.jpg"
-          alt="product image"
-        /> */}
-        <Products />
+        <div className="products-grid">
+          <Products />
+        </div>
       </div>
     </div>
   );
