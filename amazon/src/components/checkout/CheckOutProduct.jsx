@@ -15,9 +15,9 @@ const CheckOutProduct = ({
     const shoppingContext = useContext(ShoppingContext);
     const {removeFromBasket} = shoppingContext;
     
-    // const removeFromBasketHandler = (item)=>{
-    //     removeFromBasket(item.id)
-    // }
+    const removeFromBasketHandler = ()=>{
+        removeFromBasket(id)
+    }
 
   return (
     <div className="checkout-product">
@@ -41,7 +41,7 @@ const CheckOutProduct = ({
         {!hideButton && (
         <button
           className="checkout-product-button"
-          onClick={removeFromBasket}
+          onClick={removeFromBasketHandler}
         >
           Remove Form Basket
         </button>
